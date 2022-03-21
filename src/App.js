@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import CV from 'react-cv'
+import CV from 'mark-react-cv'
 import { CVData } from './data';
 
 export default class App extends Component {
