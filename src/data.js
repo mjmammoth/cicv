@@ -1,4 +1,4 @@
-import { faBook, faGraduationCap, faArchive, faRocket, faTasks, faComment, faLanguage, faCubes, faExclamation, faUserTie } from '@fortawesome/free-solid-svg-icons'
+import { faUserTie } from '@fortawesome/free-solid-svg-icons'
 export const CVData = {
     personalData: {
       name: 'Mark Marryatt',
