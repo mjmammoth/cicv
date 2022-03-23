@@ -1,4 +1,3 @@
-import { faUserTie } from '@fortawesome/free-solid-svg-icons'
 export const CVData = {
     personalData: {
       name: 'Mark Marryatt',
@@ -15,39 +14,36 @@ export const CVData = {
     },
     sections: [
       {
-        type: 'text',
+        type: 'basic-text',
         title: 'Introduction',
-        content: `
-I am an innovative, big-picture thinker with a natural knack for all things technological. I apply a logical troubleshooting process to problems while maintaining an out-of-the-box creativity to resolve these problems.
-
-I take pride in my work, taking ownership of all that I do, while looking for new challenges to help me grow.
-
-I have an unquenchable thirst for knowledge, keeping current with technology and trends by reading and continuously implementing new solutions. I have always been a self-sufficient learner.
-I often test appilications and concepts by self-hosting services on my personal Kubernetes cluster.
-
-
-I excel at working autonomously, but value nothing as highly as the ability to bounce ideas off of like-minded individuals.
-        `,
-        icon: 'usertie'
+        content: [`
+          I am an innovative, big-picture thinker with a natural knack for all things technological. I apply a logical troubleshooting process to problems while maintaining an out-of-the-box creativity to resolve these problems.
+          I take pride in my work, taking ownership of all that I do, while looking for new challenges to help me grow.
+          I have an unquenchable thirst for knowledge, keeping current with technology and trends by reading and continuously implementing new solutions. I have always been a self-sufficient learner.
+          I often test appilications and concepts by self-hosting services on my personal Kubernetes cluster.`
+      ],
+        lastLine: 'I excel at working autonomously, while valuing nothing as highly as the ability to bounce ideas off of like-minded individuals.',
+        icon: 'id-badge'
       },
       {
         type: 'experiences-list',
         title: 'Experience',
         description: '',
-        icon: faUserTie,
+        icon: 'briefcase',
         items: [
           {
             title: 'Network Systems Engineer',
             company: 'Reflex Solutions',
             description: `
-I designed and implemented systems to be used company-wide with the DevOps mindset from the onset. I commissioned a Kubernetes cluster to serve AWX, Gitea, Netbox, Postgres, Redis, MySQL and a Wiki. 
+I designed and implemented systems to be used company-wide with the DevOps mindset from the onset, commissioning a bare-metal Kubernetes cluster to serve AWX, Gitea, DroneCI, Netbox, a Wiki, and the required databases for these applications.
             
-I worked with CI/CD pipelines to automate the rolling out of Logstash pipelines across worker nodes.
-* I used Terraform to take on the infrastructure-as-code methodology, deploying virtual machines on VMWare Hypervisors.
-* I documented all of my work in a Wiki that stores data in a Markdown Git repository.
-* I played a crucial role in setting up VMWare NSX-T and vCloud Director.
+I created CI/CD pipelines using DroneCI with Gitea which enabled great automation in the environment.
+The Wiki system I implemented became the de facto system used to store technical documentation.
+I used Terraform to create Virtual Machines and the network for the VMWare Hypervisors they ran on - removing a lot of the daily toil for many engineers.
+I also played a critical role in setting up VMWare NSX-T and vCloud Director.
             `,
             companyWebSite: 'https://reflex.co.za',
+            bullets: ['1','2','4'],
             companyMeta: '',
             datesBetween: '2020 - 2021',
             descriptionTags: ['RADIUS', 'Ansible', 'Terraform', 'Elastic Stack', 'Docker', 'Kubernetes', 'VXLAN']
@@ -114,7 +110,7 @@ I learned networking and voice solution deployment methodologies as well as how 
         description: `In each of these projects I was given a goal, sometimes determining it myself, and left to my own devices to bring the project to fruition.
 
 When centering my efforts on design and architecture, I am able to produce secure, scalable and manageable solutions.`,
-        icon: "faCalculator",
+        icon: "paperclip",
         groups: [
           {
             sectionHeader: 'Reflex Solutions',
@@ -170,7 +166,7 @@ Separated Reflex core infrastructure into distinct management zones, which gave 
         type: 'common-list',
         title: 'Certifications',
         description: '',
-        icon: 'comments',
+        icon: 'trophy',
         items: [
           {
             title: 'Huawei Certified ICT Expert - Routing & Switching',
@@ -201,7 +197,7 @@ Separated Reflex core infrastructure into distinct management zones, which gave 
       {
         type: 'common-list',
         title: 'Education',
-        icon: 'graduation',
+        icon: 'graduation-cap',
         items: [
           {
             title: 'Elasticsearch Engineer 1 & 2',
