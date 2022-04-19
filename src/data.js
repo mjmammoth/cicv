@@ -43,10 +43,9 @@ I used Terraform to create Virtual Machines and the network for the VMWare Hyper
 I also played a critical role in setting up VMWare NSX-T and vCloud Director.
             `,
             companyWebSite: 'https://reflex.co.za',
-            bullets: ['1','2','4'],
             companyMeta: '',
             datesBetween: '2020 - 2021',
-            descriptionTags: ['RADIUS', 'Ansible', 'Terraform', 'Elastic Stack', 'Docker', 'Kubernetes', 'VXLAN']
+            descriptionTags: ['RADIUS', 'Ansible', 'DroneCI', 'Terraform', 'Elastic Stack', 'Docker', 'Kubernetes', 'VXLAN']
           },
           {
             title: 'Enterprise Team Lead',
