@@ -34,14 +34,12 @@ export const CVData = {
           {
             title: 'Network Systems Engineer',
             company: 'Reflex Solutions',
-            description: `
-I designed and implemented systems to be used company-wide with the DevOps mindset from the onset, commissioning a bare-metal Kubernetes cluster to serve AWX, Gitea, DroneCI, Netbox, a Wiki, and the required databases for these applications.
-            
-I created CI/CD pipelines using DroneCI with Gitea which enabled great automation in the environment.
-The Wiki system I implemented became the de facto system used to store technical documentation.
-I used Terraform to create Virtual Machines and the network for the VMWare Hypervisors they ran on - removing a lot of the daily toil for many engineers.
-I also played a critical role in setting up VMWare NSX-T and vCloud Director.
-            `,
+            descriptionParagraphs: [
+              'I designed and implemented systems to be used company-wide with the DevOps mindset from the onset, commissioning a Kubernetes cluster to serve AWX, Gitea, DroneCI, Netbox, a Wiki, and other supporting applications. Substantially time-consuming were automated in pipelines by combining DroneCI and Gitea.',
+              'The Wiki system I implemented became the de facto system used to store technical documentation.',
+              'I used Terraform to create Virtual Machines and the network for the VMWare Hypervisors they ran on - removing a lot of the daily toil for many engineers.',
+              'I also played a critical role in setting up VMWare NSX-T and vCloud Director.',
+            ],
             companyWebSite: 'https://reflex.co.za',
             companyMeta: '',
             datesBetween: '2020 - 2021',
@@ -50,16 +48,14 @@ I also played a critical role in setting up VMWare NSX-T and vCloud Director.
           {
             title: 'Enterprise Team Lead',
             company: 'Reflex Solutions',
-            description: `
-I focused on upskilling my team as much as possible by orchestrating and leading multiple training sessions for which I created complimentary virtual labs.
-* Supported core routing infrastructure.
-
-As I transitioned to the Team Lead role, I picked up the support for multiple linux servers which had not been maintained since my arrival.
-* Elastic Stack; Managing logstash pipelines, index management, elasticsearch nodes, visualizations and dashboards as well as all of the physical and virtual servers involved.
-* FreeRADIUS; Facilitated each step of on-boarding new APNs, troubleshot SQL queries and their performance. I also used RADIUS to generate Dynamic DNS entries on a BIND9 server to which multiple subdomains were delegated.
-
-I implemented Huawei's CloudCampus, a software-defined networking solution, without challenge due to already understanding the underlying components.
-            `,
+            descriptionParagraphs: [
+              'I focused on upskilling my team as much as possible by orchestrating and leading multiple training sessions for which I created complimentary virtual labs.',
+              'Supported core routing infrastructure.',
+              'As I transitioned to the Team Lead role, I picked up the support for multiple linux servers which had not been maintained since my arrival.',
+              'Elastic Stack; Managing logstash pipelines, index management, elasticsearch nodes, visualizations and dashboards as well as all of the physical and virtual servers involved.',
+              'FreeRADIUS; Facilitated each step of on-boarding new APNs, troubleshot SQL queries and their performance. I also used RADIUS to generate Dynamic DNS entries on a BIND9 server to which multiple subdomains were delegated.',
+              'I implemented Huawei\'s CloudCampus, a software-defined networking solution, without challenge due to already understanding the underlying components.',
+            ],
             companyWebSite: 'https://reflex.co.za',
             descriptionTags: ['MPLS', 'L3VPN', 'L2VPN', 'Linux', 'BGP', 'Firewalls', 'ISIS', 'DNS'],
             datesBetween: '2018 - 2020'
@@ -113,7 +109,7 @@ When centering my efforts on design and architecture, I am able to produce secur
         groups: [
           {
             sectionHeader: 'Reflex Solutions',
-            description: 'lots of words and many lots of many wmasdm as asd asd asd asd asd asd asd asd asd ad asd asd asd asd asd asd asd asd ad asd asd asd asd asd asd asd asd asd asd asd asda sdasd ',
+            description: 'WIP - description',
             items: [
               { title: 'Automation Stack Implementation', projectUrl: '', description: `
 I commissioned multiple systems to achieve a scalable automation solution.
@@ -125,7 +121,7 @@ This implementation got me recognized as Employee of the Month, for the third ti
               `},
               { title: 'Elastic Stack Redesign', description: `
 This project saw a complete overhaul of the Elastic Stack in place, resulting in jumping multiple major releases from 2.3 to 7.10.
-I carefully and diligently planned the implementation of every node, scripting a secure install process. 
+I carefully and diligently planned the implementation of every node, scripting a secure install process.
 This made spinning up a new node a matter of minutes, including the time it took to set up RAID and OS installation on the physical hosts.
 A total overhaul of the indexing and sharding strategies by implementing Index Lifecycle Management
 * Alerting using in-depth queries to output to a webhook
@@ -135,8 +131,8 @@ A total overhaul of the indexing and sharding strategies by implementing Index L
 Full redesign of underlying network and traffic paths
               `},
               { title: 'RADIUS Redesign',  projectUrl: '', description: `
-A FreeRADIUS implementation already existed at Reflex Solutions when I joined. 
-I was tasked with upgrading to a new major version. 
+A FreeRADIUS implementation already existed at Reflex Solutions when I joined.
+I was tasked with upgrading to a new major version.
 I did so by containerizing the application and running it in production with Docker.
 This project stemmed from the creation of an internal RADIUS frontend being built which led to me working closely in conjunction with our internal development team.
 Throughout the process, we highly customized our RADIUS deployment. I was involved in the creation and troubleshooting of new SQL scripts to achieve our desired outcome.
@@ -154,9 +150,9 @@ Separated Reflex core infrastructure into distinct management zones, which gave 
           },
           {
             sectionHeader: 'Jasco Electronics Holdings Limited',
-            description: 'lots of words and many lots of many wmasdm as asd asd asd asd asd asd asd asd asd ad asd asd asd asd asd asd asd asd ad asd asd asd asd asd asd asd asd asd asd asd asda sdasd ',
+            description: 'WIP - description',
             items: [
-              { title: 'LAN Upgrades',  projectUrl: '', description: 'original' }
+              { title: 'LAN Upgrades',  projectUrl: '', description: 'WIP - content' }
             ]
           }
         ]
@@ -230,4 +226,3 @@ Separated Reflex core infrastructure into distinct management zones, which gave 
       },
     ]
   }
-  
