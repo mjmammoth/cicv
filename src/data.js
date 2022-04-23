@@ -35,10 +35,12 @@ export const CVData = {
             title: 'Network Systems Engineer',
             company: 'Reflex Solutions',
             descriptionParagraphs: [
-              'I designed and implemented systems to be used company-wide with the DevOps mindset from the onset, commissioning a Kubernetes cluster to serve AWX, Gitea, DroneCI, Netbox, a Wiki, and other supporting applications. Substantially time-consuming were automated in pipelines by combining DroneCI and Gitea.',
-              'The Wiki system I implemented became the de facto system used to store technical documentation.',
-              'I used Terraform to create Virtual Machines and the network for the VMWare Hypervisors they ran on - removing a lot of the daily toil for many engineers.',
-              'I also played a critical role in setting up VMWare NSX-T and vCloud Director.',
+              'I designed and implemented systems to be used company-wide with the DevOps mindset from the onset, commissioning a Kubernetes cluster to serve AWX, Gitea, DroneCI, Netbox, a Wiki, and other supporting applications. Many time-consuming operations were automated in pipelines by combining DroneCI and Gitea.',
+            ],
+            bullets: [
+              'The Wiki that I implemented of my own volition became the de facto system used to store technical documentation.',
+              'I used Terraform to create Virtual Machines and provision the underlying network for the VMWare Hypervisors they ran on - which removed a lot of the daily toil for the Cloud engineers and minimised manual faults.',
+              'I played a critical role in setting up VMWare NSX-T and vCloud Director enabling the company to sell a PaaS solution to clients.',
             ],
             companyWebSite: 'https://reflex.co.za',
             companyMeta: '',
@@ -54,7 +56,7 @@ export const CVData = {
               'As I transitioned to the Team Lead role, I picked up the support for multiple linux servers which had not been maintained since my arrival.',
               'Elastic Stack; Managing logstash pipelines, index management, elasticsearch nodes, visualizations and dashboards as well as all of the physical and virtual servers involved.',
               'FreeRADIUS; Facilitated each step of on-boarding new APNs, troubleshot SQL queries and their performance. I also used RADIUS to generate Dynamic DNS entries on a BIND9 server to which multiple subdomains were delegated.',
-              'I implemented Huawei\'s CloudCampus, a software-defined networking solution, without challenge due to already understanding the underlying components.',
+              'I implemented Huawei\'s CloudCampus, their software-defined networking solution, without challenge due to already understanding all of the underlying components.',
             ],
             companyWebSite: 'https://reflex.co.za',
             descriptionTags: ['MPLS', 'L3VPN', 'L2VPN', 'Linux', 'BGP', 'Firewalls', 'ISIS', 'DNS'],
@@ -63,12 +65,12 @@ export const CVData = {
           {
             title: 'Network Engineer',
             company: 'Reflex Solutions',
-            description: `
-When Jasco acquired Reflex, I was quickly moved over as my skills were aligned with Reflex's offerings.
-In this role, I carried out many site installations, configuring layer 2 and 3 last-mile services on both PE and CE routers.
-* Completed thorough network audits with in-depth evaluations.
-* Supporting end clients through support tickets.
-            `,
+            description: [
+              'When Jasco acquired Reflex, I was quickly moved over as my skills were aligned with Reflex\'s offerings.',
+              'In this role, I carried out many site installations, configuring layer 2 and 3 last-mile services on both PE and CE routers.',
+              'Completed thorough network audits with in-depth evaluations.',
+              'Supporting end clients through support tickets.'
+            ],
             companyWebSite: 'https://reflex.co.za',
             descriptionTags: ['MPLS', 'BGP', 'Firewalls', 'FTTx', 'QoS'],
             datesBetween: '2017 - 2018'
@@ -76,13 +78,11 @@ In this role, I carried out many site installations, configuring layer 2 and 3 l
           {
             title: 'Support Engineer',
             company: 'Jasco Electronics Holdings Limited',
-            description: `
-Completed a rip and replace of all networking equipment where I implemented Avaya's flagship Fabric Connect protocol. ISIS adjacencies were formed on all access switches to achieve Shortest Path Bridging via mac-in-mac encapsulation.
-
-In this role I supported all IT infrastructure in Jasco group in a team of 5. This gave me the opportunity to work on a wide range of technologies and understand what makes user experience.
-
-In my time with Jasco I worked on Switches, Routers, Firewalls, Active Directory, VMWare ESXi, Linux, Databases and general processes.
-            `,
+            description: [
+              'Completed a rip and replace of all networking equipment where I implemented Avaya\'s flagship Fabric Connect protocol. ISIS adjacencies were formed on all access switches to achieve Shortest Path Bridging via mac-in-mac encapsulation.',
+              'In this role I supported all IT infrastructure in Jasco group in a team of 5. This gave me the opportunity to work on a wide range of technologies and understand what makes user experience.',
+              'In my time with Jasco I worked on Switches, Routers, Firewalls, Active Directory, VMWare ESXi, Linux, Databases and general processes.'
+            ],
             companyWebSite: 'https://jasco.co.za',
             descriptionTags: ['Routing & Switching', 'VMWare ESXi', 'Fabric Connect', 'SPB-M', 'Active Directory', 'Windows Server', 'IP PABX', 'QoS'],
             datesBetween: '2016 - 2017'
@@ -90,9 +90,9 @@ In my time with Jasco I worked on Switches, Routers, Firewalls, Active Directory
           {
             title: 'Network Intern',
             company: 'Avaya',
-            description: `
-I learned networking and voice solution deployment methodologies as well as how to support customers in different environments. I earned multiple entry-level certifications during my time with Avaya.
-            `,
+            description: [
+              'I learned networking and voice solution deployment methodologies as well as how to support customers in different environments. I earned multiple entry-level certifications during my time with Avaya.',
+            ],
             companyWebSite: 'https://avaya.com',
             descriptionTags: ['Routing & Switching', 'Fabric Connect', 'SPB-M', 'IP PABX'],
             datesBetween: '2015 - 2016'
@@ -102,50 +102,70 @@ I learned networking and voice solution deployment methodologies as well as how 
       {
         type: 'projects-list',
         title: 'Selected Projects',
-        description: `In each of these projects I was given a goal, sometimes determining it myself, and left to my own devices to bring the project to fruition.
-
-When centering my efforts on design and architecture, I am able to produce secure, scalable and manageable solutions.`,
+        description: [
+          'In each of these projects I was given a goal, sometimes determining it myself, and left to my own devices to bring the project to fruition.',
+          'When centering my efforts on design and architecture, I am able to produce secure, scalable and manageable solutions.',
+        ],
         icon: "paperclip",
         groups: [
           {
             sectionHeader: 'Reflex Solutions',
             description: 'WIP - description',
             items: [
-              { title: 'Automation Stack Implementation', projectUrl: '', description: `
-I commissioned multiple systems to achieve a scalable automation solution.
-Ansible AWX pulls playbooks and inventory references from a repository stored in Gitea, which then triggers an update of the dynamic inventory variables housed in Netbox.
-The playbooks I wrote mostly automate action on our routers. The backup playbooks I wrote commits to a Git repository, achieving version controlled insight.
-Other playbooks include handling the configuration of TACACS, standardizing ACLs and also ensuring security practices are implemented.
-I automated the creation of dashboards for new clients with information that greatly reduced MTTR by making it possible to correlate events across devices and exposing information that would normally take time retrieve.
-This implementation got me recognized as Employee of the Month, for the third time during my time at Reflex.
-              `},
-              { title: 'Elastic Stack Redesign', description: `
-This project saw a complete overhaul of the Elastic Stack in place, resulting in jumping multiple major releases from 2.3 to 7.10.
-I carefully and diligently planned the implementation of every node, scripting a secure install process.
-This made spinning up a new node a matter of minutes, including the time it took to set up RAID and OS installation on the physical hosts.
-A total overhaul of the indexing and sharding strategies by implementing Index Lifecycle Management
-* Alerting using in-depth queries to output to a webhook
-* Restitching of Logstash pipeline
-* Creation of many visualizations and dashboards within Kibana
-* Ascertaining that the solution is properly multi-tenanted with security
-Full redesign of underlying network and traffic paths
-              `},
-              { title: 'RADIUS Redesign',  projectUrl: '', description: `
-A FreeRADIUS implementation already existed at Reflex Solutions when I joined.
-I was tasked with upgrading to a new major version.
-I did so by containerizing the application and running it in production with Docker.
-This project stemmed from the creation of an internal RADIUS frontend being built which led to me working closely in conjunction with our internal development team.
-Throughout the process, we highly customized our RADIUS deployment. I was involved in the creation and troubleshooting of new SQL scripts to achieve our desired outcome.
-              `},
-              { title: 'MPLS Decommissioning', projectUrl: '', description: `
-I planned and scripted and executed the seamless decommissioning of core routers in different regions. Execution took only minutes after days of meticulous planning and preparation.
-              `},
-              { title: 'Network Device Management redesign', projectUrl: '', description: `
-Implemented AAA services
-* TACACS for Authentication and Authorization
-* The Elastic Stack for Accounting and all other router logs
-Separated Reflex core infrastructure into distinct management zones, which gave the ability to apply fine-grained policies to segments of the network at scale.
-              `}
+              {
+                title: 'Automation Stack Implementation',
+                projectUrl: '',
+                description: [
+                  'I commissioned multiple systems to achieve a scalable automation solution.',
+                  'Ansible AWX pulls playbooks and inventory references from a repository stored in Gitea, which then triggers an update of the dynamic inventory variables housed in Netbox.',
+                  'The playbooks I wrote mostly automate action on our routers. The backup playbooks I wrote commits to a Git repository, achieving version controlled insight.',
+                  'Other playbooks include handling the configuration of TACACS, standardizing ACLs and also ensuring security practices are implemented.',
+                  'I automated the creation of dashboards for new clients with information that greatly reduced MTTR by making it possible to correlate events across devices and exposing information that would normally take time retrieve.',
+                  'This implementation got me recognized as Employee of the Month, for the third time during my time at Reflex.',
+                ]
+              },
+              {
+                title: 'Elastic Stack Redesign',
+                description: [
+                  'This project saw a complete overhaul of the Elastic Stack in place, resulting in jumping multiple major releases from 2.3 to 7.10.',
+                  'I carefully and diligently planned the implementation of every node, scripting a secure install process.',
+                  'This made spinning up a new node a matter of minutes, including the time it took to set up RAID and OS installation on the physical hosts.',
+                  'A total overhaul of the indexing and sharding strategies by implementing Index Lifecycle Management',
+                  '* Alerting using in-depth queries to output to a webhook',
+                  '* Restitching of Logstash pipeline',
+                  '* Creation of many visualizations and dashboards within Kibana',
+                  '* Ascertaining that the solution is properly multi-tenanted with security',
+                  'Full redesign of underlying network and traffic paths',
+                ]
+              },
+              {
+                title: 'RADIUS Redesign',
+                projectUrl: '',
+                description: [
+                  'A FreeRADIUS implementation already existed at Reflex Solutions when I joined.',
+                  'I was tasked with upgrading to a new major version.',
+                  'I did so by containerizing the application and running it in production with Docker.',
+                  'This project stemmed from the creation of an internal RADIUS frontend being built which led to me working closely in conjunction with our internal development team.',
+                  'Throughout the process, we highly customized our RADIUS deployment. I was involved in the creation and troubleshooting of new SQL scripts to achieve our desired outcome.',
+                ]
+              },
+              {
+                title: 'MPLS Decommissioning',
+                projectUrl: '',
+                description: [
+                  'I planned and scripted and executed the seamless decommissioning of core routers in different regions. Execution took only minutes after days of meticulous planning and preparation.',
+                ]
+              },
+              {
+                title: 'Network Device Management redesign',
+                projectUrl: '',
+                description: [
+                  'Implemented AAA services',
+                  '* TACACS for Authentication and Authorization',
+                  '* The Elastic Stack for Accounting and all other router logs',
+                  'Separated Reflex core infrastructure into distinct management zones, which gave the ability to apply fine-grained policies to segments of the network at scale.',
+                ]
+              }
             ]
           },
           {
