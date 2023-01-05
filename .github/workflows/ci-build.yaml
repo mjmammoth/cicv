@@ -62,4 +62,4 @@ jobs:
         with:
           push: true
           platforms: linux/arm64
-          tags: ${{ secrets.DOCKER_USERNAME }}/cicv:latest,${{ secrets.REG_URL }}/cicv:${{ steps.prep.outputs.BUILD_ID }}
+          tags: ${{ secrets.DOCKER_USERNAME }}/cicv:latest,${{ secrets.DOCKER_USERNAME }}/cicv:${{ steps.prep.outputs.BUILD_ID }}
